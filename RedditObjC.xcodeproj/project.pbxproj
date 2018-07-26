@@ -14,6 +14,7 @@
 		B6A4CA08210A28DB00C9DADE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA07210A28DB00C9DADE /* main.m */; };
 		B6A4CA16210A2A1C00C9DADE /* ZMFPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA15210A2A1C00C9DADE /* ZMFPost.m */; };
 		B6A4CA19210A2C7100C9DADE /* ZMFPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */; };
+		B6A4CA1C210A324700C9DADE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA1B210A324700C9DADE /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		B6A4CA15210A2A1C00C9DADE /* ZMFPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMFPost.m; sourceTree = "<group>"; };
 		B6A4CA17210A2C7100C9DADE /* ZMFPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMFPostController.h; sourceTree = "<group>"; };
 		B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMFPostController.m; sourceTree = "<group>"; };
+		B6A4CA1A210A324700C9DADE /* RedditObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		B6A4CA1B210A324700C9DADE /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B6A4C9FE210A28D800C9DADE /* Main.storyboard */,
+				B6A4CA1B210A324700C9DADE /* PostTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +118,7 @@
 		B6A4CA13210A290700C9DADE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6A4CA1A210A324700C9DADE /* RedditObjC-Bridging-Header.h */,
 				B6A4C9F8210A28D800C9DADE /* AppDelegate.h */,
 				B6A4C9F9210A28D800C9DADE /* AppDelegate.m */,
 				B6A4CA01210A28DB00C9DADE /* Assets.xcassets */,
@@ -156,6 +161,7 @@
 				TargetAttributes = {
 					B6A4C9F4210A28D800C9DADE = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -197,6 +203,7 @@
 			files = (
 				B6A4CA16210A2A1C00C9DADE /* ZMFPost.m in Sources */,
 				B6A4CA19210A2C7100C9DADE /* ZMFPostController.m in Sources */,
+				B6A4CA1C210A324700C9DADE /* PostTableViewCell.swift in Sources */,
 				B6A4CA08210A28DB00C9DADE /* main.m in Sources */,
 				B6A4C9FA210A28D800C9DADE /* AppDelegate.m in Sources */,
 			);
@@ -338,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKK87S6JNY;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
@@ -347,6 +355,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachfrew.RedditObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditObjC/Resources/RedditObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -355,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKK87S6JNY;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
@@ -364,6 +376,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachfrew.RedditObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditObjC/Resources/RedditObjC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

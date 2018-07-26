@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, readonly) NSInteger ups;
 @property (nonatomic, readonly) NSInteger commentCount;
-@property (nonatomic, copy, readonly) NSString *imageURLExtension;
+@property (nonatomic, copy, readonly) NSString *postImage;
 
 - (instancetype)initWithTitle:(NSString *)title
                            ups:(NSInteger)ups

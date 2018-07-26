@@ -18,7 +18,7 @@
         _title = [title copy];
         _ups = ups;
         _commentCount = commentCount;
-        _imageURLExtension = [imageURLExtension copy];
+        _postImage = [imageURLExtension copy];
     }
     return self;
 }
