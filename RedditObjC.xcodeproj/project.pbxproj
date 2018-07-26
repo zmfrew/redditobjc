@@ -12,6 +12,8 @@
 		B6A4CA02210A28DB00C9DADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6A4CA01210A28DB00C9DADE /* Assets.xcassets */; };
 		B6A4CA05210A28DB00C9DADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6A4CA03210A28DB00C9DADE /* LaunchScreen.storyboard */; };
 		B6A4CA08210A28DB00C9DADE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA07210A28DB00C9DADE /* main.m */; };
+		B6A4CA16210A2A1C00C9DADE /* ZMFPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA15210A2A1C00C9DADE /* ZMFPost.m */; };
+		B6A4CA19210A2C7100C9DADE /* ZMFPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		B6A4CA04210A28DB00C9DADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6A4CA06210A28DB00C9DADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6A4CA07210A28DB00C9DADE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6A4CA14210A2A1C00C9DADE /* ZMFPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMFPost.h; sourceTree = "<group>"; };
+		B6A4CA15210A2A1C00C9DADE /* ZMFPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMFPost.m; sourceTree = "<group>"; };
+		B6A4CA17210A2C7100C9DADE /* ZMFPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMFPostController.h; sourceTree = "<group>"; };
+		B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMFPostController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 		B6A4CA10210A28F500C9DADE /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6A4CA17210A2C7100C9DADE /* ZMFPostController.h */,
+				B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -97,6 +105,8 @@
 		B6A4CA12210A28FF00C9DADE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6A4CA14210A2A1C00C9DADE /* ZMFPost.h */,
+				B6A4CA15210A2A1C00C9DADE /* ZMFPost.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +150,7 @@
 		B6A4C9ED210A28D800C9DADE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZMF;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Zachary Frew";
 				TargetAttributes = {
@@ -184,6 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A4CA16210A2A1C00C9DADE /* ZMFPost.m in Sources */,
+				B6A4CA19210A2C7100C9DADE /* ZMFPostController.m in Sources */,
 				B6A4CA08210A28DB00C9DADE /* main.m in Sources */,
 				B6A4C9FA210A28D800C9DADE /* AppDelegate.m in Sources */,
 			);
@@ -327,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKK87S6JNY;
-				INFOPLIST_FILE = RedditObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,7 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PKK87S6JNY;
-				INFOPLIST_FILE = RedditObjC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
