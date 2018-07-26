@@ -10,6 +10,32 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var upsLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
     
-
+    // MARK: - Properties
+    var post: ZMFPost? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    var postImage: UIImage? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    // MARK: - Methods
+    func updateViews() {
+        guard let post = post else { return }
+        titleLabel.text = post.title
+        upsLabel.text = "👍 \(post.ups)"
+        commentCountLabel.text = "💬 \(post.commentCount)"
+        postImageView.image = postImage
+    }
+    
 }

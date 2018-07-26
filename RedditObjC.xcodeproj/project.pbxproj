@@ -15,6 +15,7 @@
 		B6A4CA16210A2A1C00C9DADE /* ZMFPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA15210A2A1C00C9DADE /* ZMFPost.m */; };
 		B6A4CA19210A2C7100C9DADE /* ZMFPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */; };
 		B6A4CA1C210A324700C9DADE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA1B210A324700C9DADE /* PostTableViewCell.swift */; };
+		B6A4CA1E210A339D00C9DADE /* PostsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A4CA1D210A339D00C9DADE /* PostsListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B6A4CA18210A2C7100C9DADE /* ZMFPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMFPostController.m; sourceTree = "<group>"; };
 		B6A4CA1A210A324700C9DADE /* RedditObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		B6A4CA1B210A324700C9DADE /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		B6A4CA1D210A339D00C9DADE /* PostsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		B6A4CA0F210A28EE00C9DADE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B6A4CA1D210A339D00C9DADE /* PostsListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6A4CA16210A2A1C00C9DADE /* ZMFPost.m in Sources */,
+				B6A4CA1E210A339D00C9DADE /* PostsListTableViewController.swift in Sources */,
 				B6A4CA19210A2C7100C9DADE /* ZMFPostController.m in Sources */,
 				B6A4CA1C210A324700C9DADE /* PostTableViewCell.swift in Sources */,
 				B6A4CA08210A28DB00C9DADE /* main.m in Sources */,

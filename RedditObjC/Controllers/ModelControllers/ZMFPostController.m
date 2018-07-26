@@ -32,9 +32,11 @@
 // MARK: - Methods
 - (void)retrievePostsWithSearchTerm:(NSString *)searchTerm completion:(void (^) (NSArray<ZMFPost *> *posts))completion
 {
-    NSURL *baseURL = [[[self baseURL] URLByAppendingPathComponent:searchTerm] URLByAppendingPathExtension:@"json"];
-    
-    [[[NSURLSession sharedSession] dataTaskWithURL:baseURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    NSURL *searchURL = [self baseURL];
+    searchURL = [searchURL URLByAppendingPathComponent:searchTerm];
+    searchURL = [searchURL URLByAppendingPathExtension:@"json"];
+
+    [[[NSURLSession sharedSession] dataTaskWithURL:searchURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"Error occurred retrieving posts: %@", [error localizedDescription]);
             completion(nil);
@@ -64,7 +66,8 @@
 
 - (void)retrieveImageFromPost:(ZMFPost *)post completion:(void (^) (UIImage *))completion
 {
-    NSURL *imageURL = [NSURL URLWithString:post.postImage];
+    NSString *imageURLString = [[NSString alloc] initWithFormat:post.postImage];
+    NSURL *imageURL = [NSURL URLWithString:imageURLString];
     
     [[[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
@@ -81,6 +84,7 @@
         
         UIImage *image = [UIImage imageWithData:data];
         completion(image);
+        
     }] resume];
 }
 

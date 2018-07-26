@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithTitle:(NSString *)title
                            ups:(NSInteger)ups
                   commentCount:(NSInteger)commentCount
-             imageURLExtension:(NSString *)imageURLExtension;
+                    postImage:(NSString *)postImage;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

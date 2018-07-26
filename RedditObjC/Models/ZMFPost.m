@@ -11,26 +11,28 @@
 @implementation ZMFPost
 
 // MARK: - Initializers
-- (instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSInteger)commentCount imageURLExtension:(NSString *)imageURLExtension
+- (instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSInteger)commentCount postImage:(NSString *)postImage
 {
     self = [super init];
     if (self) {
         _title = [title copy];
         _ups = ups;
         _commentCount = commentCount;
-        _postImage = [imageURLExtension copy];
+        _postImage = [postImage copy];
     }
     return self;
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    NSString *title = dictionary[[ZMFPost titlekey]];
-    NSInteger ups = [dictionary[[ZMFPost upsKey]] integerValue];
-    NSInteger commentCount = [dictionary[[ZMFPost commentCountKey]] integerValue];
-    NSString *imageURLExtension = dictionary[[ZMFPost imageURLExtensionKey]];
+    NSDictionary *dataDictionary = dictionary[@"data"];
     
-    return [self initWithTitle:title ups:ups commentCount:commentCount imageURLExtension:imageURLExtension];
+    NSString *title = dataDictionary[[ZMFPost titlekey]];
+    NSInteger ups = [dataDictionary[[ZMFPost upsKey]] integerValue];
+    NSInteger commentCount = [dataDictionary[[ZMFPost commentCountKey]] integerValue];
+    NSString *postImage = dataDictionary[[ZMFPost postImageKey]];
+    
+    return [self initWithTitle:title ups:ups commentCount:commentCount postImage:postImage];
 }
 
 // MARK: - Dictionary Key Methods
@@ -49,7 +51,7 @@
     return @"num_comments";
 }
 
-+ (NSString *)imageURLExtensionKey
++ (NSString *)postImageKey
 {
     return @"thumbnail";
 }
